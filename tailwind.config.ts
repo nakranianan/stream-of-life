@@ -52,6 +52,16 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				medical: {
+					red: 'hsl(var(--medical-red))',
+					'red-light': 'hsl(var(--medical-red-light))',
+					blue: 'hsl(var(--medical-blue))',
+					'blue-light': 'hsl(var(--medical-blue-light))',
+					green: 'hsl(var(--medical-green))',
+					'green-light': 'hsl(var(--medical-green-light))',
+					orange: 'hsl(var(--medical-orange))',
+					'orange-light': 'hsl(var(--medical-orange-light))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +77,16 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'gradient-medical': 'var(--gradient-medical)',
+				'gradient-emergency': 'var(--gradient-emergency)',
+				'gradient-hero': 'var(--gradient-hero)'
+			},
+			boxShadow: {
+				'medical': 'var(--shadow-medical)',
+				'card': 'var(--shadow-card)',
+				'emergency': 'var(--shadow-emergency)'
 			},
 			keyframes: {
 				'accordion-down': {
