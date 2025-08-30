@@ -10,6 +10,8 @@ import { Users, Heart, MapPin, Phone, AlertTriangle, Clock, CheckCircle } from "
 import { useToast } from "@/hooks/use-toast";
 import { sampleBloodRequests, sampleDonors } from "@/data/sampleData";
 import Navbar from "@/components/Navbar";
+import EmergencyAlert from "@/components/EmergencyAlert";
+import EmergencyNotificationCenter from "@/components/EmergencyNotificationCenter";
 
 const Donor = () => {
   const { toast } = useToast();
@@ -101,9 +103,15 @@ const Donor = () => {
           <p className="text-muted-foreground">Register as a donor and help save lives</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Emergency Alert - Full Width */}
+          <div className="lg:col-span-3">
+            <EmergencyAlert />
+          </div>
+
           {/* Donor Registration Form */}
-          <Card className="shadow-card">
+          <div className="lg:col-span-2">
+            <Card className="shadow-card">
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
                 <Users className="h-5 w-5 text-medical-blue" />
@@ -248,10 +256,15 @@ const Donor = () => {
                 Register as Donor
               </Button>
             </CardContent>
-          </Card>
+            </Card>
+          </div>
 
           {/* Blood Requests & Donor Status */}
           <div className="space-y-6">
+            {/* Emergency Notification Center */}
+            <EmergencyNotificationCenter />
+            
+            {/* Nearby Blood Requests */}
             {/* Nearby Blood Requests */}
             <Card className="shadow-card">
               <CardHeader>

@@ -10,6 +10,7 @@ import { Heart, MapPin, Phone, Calendar, AlertTriangle, CheckCircle, Clock } fro
 import { useToast } from "@/hooks/use-toast";
 import { sampleBloodRequests, sampleDonors, sampleBloodBanks, getCompatibleDonors } from "@/data/sampleData";
 import Navbar from "@/components/Navbar";
+import EmergencyBloodRequest from "@/components/EmergencyBloodRequest";
 
 const Patient = () => {
   const { toast } = useToast();
@@ -101,7 +102,12 @@ const Patient = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Blood Request Form */}
+          {/* Emergency Blood Request Component */}
+          <div className="lg:col-span-2 mb-8">
+            <EmergencyBloodRequest />
+          </div>
+
+          {/* Standard Blood Request Form */}
           <Card className="shadow-card">
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
